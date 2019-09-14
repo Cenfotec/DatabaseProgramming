@@ -1,0 +1,14 @@
+PL/SQL (Procedural Language)
+
+Bloque:
+    - Declare (opcional)
+    - Begin (obligatorio)
+    - Exception (opcional)
+    - End; (obligatorio)
+    Ejecuta una serie de sentencias
+    Objeto guarda datos
+    Tabla guarda información
+	
+SET SERVEROUTPUT ON
+	
+	
