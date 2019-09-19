@@ -1,0 +1,8 @@
+https://docs.oracle.com/cd/A81042_01/DOC/sqlplus.816/a75664/ch31.htm
+
+Change date format:
+    - mon = number
+    - month = text
+alter session set nls_date_format='dd/mon[th]/yyyy hh:mi:ss'
+
+SET VERIFY OFF
