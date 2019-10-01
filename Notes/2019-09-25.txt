@@ -1,0 +1,5 @@
+Create user:
+    - create user <username> identified by <password>
+
+Give Access:
+    - grant connect, resource to <username>
