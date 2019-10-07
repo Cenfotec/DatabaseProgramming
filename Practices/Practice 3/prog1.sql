@@ -1,0 +1,1 @@
+ALTER TABLE EMPLEADOS_COPY ADD rank varchar2(20);
