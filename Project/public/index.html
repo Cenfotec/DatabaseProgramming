@@ -1,0 +1,212 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/player_screen.css">
+    <link rel="stylesheet" href="css/env.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/player_display.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/leaderboard.css">
+    <link rel="stylesheet" href="css/exchange.css">
+    <title>Scrabble</title>
+</head>
+
+<body>
+
+    <!-- Choose Player Screen -->
+    <div id="playerScreen">
+        <div id="ps_container">
+            <div>
+                <p id="loginTitle" class="title">Login to Play</p>
+                <p id="loginSubtitle">Provide the username of both players to play Scrabble!</p>
+            </div>
+
+            <div style="padding: 6% 0;">
+
+                <div style="padding: 2% 0;">
+                    <input type="text" id="p1" class="username" placeholder="Player_one">
+
+                </div>
+
+                <div style="padding: 2% 0;">
+                    <input type="text" id="p2" class="username" placeholder="Player_two">
+                </div>
+
+            </div>
+
+
+
+            <div style="padding: 5%; text-align: center;">
+                <button type="button" id="btnPlay">Play</button>
+            </div>
+
+            <div>
+                <button type="button" id="btnLeaderboard"><i class="fas fa-star"></i></button>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <!-- Leaderboard -->
+    <div id="leaderboardScreen" style="display: none;">
+        <div id="lbs_container">
+            <div>
+                <div id="closeLeaderboard">
+                    <div id="closeLeaderboardWrapper">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                </div>
+                <p id="leaderboardTitle" class="title">Leaderboard</p>
+                <p id="leaderboardSubtitle">These are the top players of Scrabble ordered by games won.</p>
+                <div id="leaderboard">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Username</th>
+                                <th>Games Played</th>
+                                <th>Games Won</th>
+                                <th>Games Lost</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboardBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Register confirmation -->
+    <div id="registerScreen" style="display: none;">
+        <div id="rs_container">
+            <div>
+                <div id="closeRegister">
+                    <div id="closeRegisterWrapper">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                </div>
+                <p id="registerTitle" class="title">New Account</p>
+                <p id="registerSubtitle">Are you sure you want to register the follow username?</p>
+                <p id="usernameSubtitle"></p>
+                <button type="button" id="btnRegisterConfirm">Register</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Exchange letters -->
+    <div id="exchangeScreen" style="display: none;">
+        <div id="es_container">
+            <div>
+                <div id="closeExchange">
+                    <div id="closeExchangeWrapper">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                </div>
+                <p id="exchangeTitle" class="title">Exchange Letters</p>
+                <p id="exchangeSubtitle">Select any letters you want to exchange.</p>
+                <div id="exchangeLetters">
+
+                </div>
+                <button type="button" id="btnExchangeConfirm">Exchange</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scrabble Game Screen -->
+    <div id="gameScreen" style="display: none;">
+
+        <!-- Nav -->
+
+        <nav>
+            <div id="navMiddle">
+
+                <div id="p1Frame" class="playerFrame">
+                    <div id="p1FrameCircle" class="frameCircle frameCircleTurn">
+                        <p id="p1FramePoints" class="framePoints">0</p>
+                    </div>
+                    <p id="p1FrameUsername" class="frameText frameTextTurn"></p>
+                </div>
+
+                <div id="p2Frame" class="playerFrame">
+                    <div id="p2FrameCircle" class="frameCircle frameCircleNoTurn">
+                        <p id="p2FramePoints" class="framePoints">0</p>
+                    </div>
+                    <p id="p2FrameUsername" class="frameText frameTextNoTurn"></p>
+                </div>
+
+            </div>
+        </nav>
+
+
+        <!-- Environment -->
+
+        <div id="environment">
+            <svg id="svg" height="525" version="1.1" width="525" xmlns="http://www.w3.org/2000/svg"
+                style="overflow: hidden; position: relative; padding: 1.5%;">
+                <!-- Generate SVG -->
+            </svg>
+        </div>
+
+
+
+        <!-- Player Display -->
+        <div id="playerDisplay">
+            <div id="pd_container">
+
+                <div id="letterDisplay">
+                    <button type="button" id="btnExchange" class="playerButtons"><i
+                            class="fas fa-exchange-alt"></i></button>
+                    <svg id="svgDisplay" height="50" version="1.1" width="350" xmlns="http://www.w3.org/2000/svg"
+                        style="overflow: hidden; position: relative;">
+                        <!-- Generate SVG -->
+                    </svg>
+
+                    <button type="button" id="btnShuffle" class="playerButtons"><i class="fas fa-random"></i></button>
+                    <button type="button" id="btnReady">
+                        <i id="playerCheck" class="fas fa-check"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/a4e5821cc7.js" crossorigin="anonymous"></script>
+    <script src="js/entity/ScrabbleDB.js"></script>
+    <script src="js/entity/Player.js"></script>
+    <script src="js/entity/Game.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/environment.js"></script>
+    <script src="js/interaction.js"></script>
+    <script src="js/player_display.js"></script>
+    <script src="js/player_screen.js"></script>
+    <script src="js/point_system.js"></script>
+</body>
+
+</html>

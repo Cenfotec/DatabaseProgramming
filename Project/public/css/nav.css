@@ -1,0 +1,68 @@
+nav {
+    background-color: #FFF;
+    /* height: 7.5%; */
+    box-shadow: 0 5px 10px 0 rgba(0,64,128,.05);
+    text-align: center;
+}
+
+#navMiddle {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.playerFrame {
+    display: inline-block;
+    padding: 2px 30px;
+}
+
+.frameCircle {
+    padding: 10px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin: 10px auto;
+    position: relative;
+    text-align: center;
+}
+
+.frameCircleNoTurn {
+    border: 2px solid #334F9C;
+}
+
+.frameCircleNoTurn p {
+    color: #334F9C;
+}
+
+.frameCircleTurn {
+    background-color: #334F9C;
+}
+
+.frameCircleTurn p {
+    color: #FFF;
+}
+
+.framePoints {
+    color: #334F9C;
+    font-size: 20px;
+    transform: translate(0%, -80%);
+}
+
+.frameText {
+    font-family: monospace;
+    letter-spacing: 0.25px;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.frameTextTurn {
+    color: #31323f;
+}
+
+.frameTextNoTurn {
+    color: #a0a0a0;
+}
+
+.playerFrame:first-child {
+    border-right: 2px dashed #F2F2F2;
+}

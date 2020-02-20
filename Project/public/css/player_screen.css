@@ -1,0 +1,118 @@
+#playerScreen {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: #FFF;
+}
+
+#ps_container {
+    border: 1px solid #E1E4E8;
+    border-radius: 10px;
+    margin: auto;
+    transform: translate(0%, -10%);
+    text-align: center;
+    padding: 55px;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    color: #7289DA;
+}
+
+#loginTitle {
+    padding-bottom: 4%;
+    border-bottom: 1px solid #F2F2F2;
+    margin-bottom: 20px;
+}
+
+#loginSubtitle {
+    color: #787983;
+    font-size: 14px;
+}
+
+#btnPlay {
+    outline: 0;
+    border: 2px solid #7289DA;
+    padding: 15px 100px; 
+    background-color: transparent;
+    color: #7289DA;
+    font-size: 14px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+    letter-spacing: 1.25px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#btnPlay:hover {
+    background-color: #7289DA;
+    color: #FFF;
+}
+
+.username {
+    background-color: #F2F2F2;
+    /* padding: 15px 65px; */
+    border: none;
+    border-right: 5px solid #F2F2F2;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: 0;
+    color: gray;
+    padding: 15px 100px 15px 15px;
+}
+
+.btnRegister {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #7289DA;
+    outline: 0;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: absolute;
+    transform: translate(50%, 25%);
+}
+
+.btnRegister:hover {
+    background-color: #7289DA;
+}
+
+.btnRegister:hover #loginCheck {
+    color: #FFF;
+}
+
+#loginCheck {
+    color: #7289DA;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+#btnLeaderboard {
+    outline: 0;
+    border: 0;
+    border: 1.5px solid #54C472;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#btnLeaderboard:hover {
+    background-color: #54C472;
+}
+
+.fa-star {
+    color: #54C472;
+    font-size: 20px;
+    transition: all 0.2s ease;
+}
+
+#btnLeaderboard:hover .fa-star {
+    color: #FFF;
+}
